@@ -15,7 +15,6 @@ var candy = function (ratings) {
         }
     }
 
-
     for (let index = ratings.length - 2; index >= 0; index--) {
         if (ratings[index] > ratings[index + 1]) {
             if (candies[index] <= candies[index + 1]) {
