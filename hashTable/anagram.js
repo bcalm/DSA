@@ -23,4 +23,4 @@ var minSteps = function (s, t) {
     return count;
 };
 
-minSteps("anagram", "mangaar");
+minSteps("anagram", "mangaar");  
