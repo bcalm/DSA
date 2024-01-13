@@ -1,7 +1,18 @@
-var rotate = function(nums, k) {
-    const subArray = nums.splice(nums.length - k, k);
-    nums.unshift(...subArray)
+var rotate = function (nums, k) {
+    k = k % nums.length;
+    if (k != 0) {
+        let arr = [];
+        for (var i = nums.length - k; i < nums.length; i++) {
+            arr.push(nums[i]);
+        }
+        for (var i = 0; i < nums.length - k; i++) {
+            arr.push(nums[i]);
+        }
+        for (var i = 0; i < nums.length; i++) {
+            nums[i] = arr[i];
+        }
+    }
 };
-const nums = [-1,-100,3,99], k = 2
+const nums = [1], k = 3
 rotate(nums, k)
 console.log(nums)
