@@ -16,7 +16,6 @@ var minSteps = function (s, t) {
     }
     for (const key in tMap) {
         if (tMap[key] > sMap[key] || sMap[key] === undefined) {
-            console.log(key)
             count += Math.abs(tMap[key] - (sMap[key] || 0))
         }
     }
